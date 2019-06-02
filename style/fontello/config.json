@@ -1,0 +1,46 @@
+{
+  "name": "micro",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "7480a298ce334eef70193895e799c3fd",
+      "css": "headphones",
+      "code": 59392,
+      "src": "elusive"
+    },
+    {
+      "uid": "09b251f36844ae25d58767d85d21bf88",
+      "css": "video-alt",
+      "code": 59393,
+      "src": "elusive"
+    },
+    {
+      "uid": "20fc52f9a88bb7bda023ef209acac095",
+      "css": "graduation-cap",
+      "code": 61853,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "e7ab5637425cce7dd2176302ddaf1c08",
+      "css": "music",
+      "code": 59394,
+      "src": "elusive"
+    },
+    {
+      "uid": "a1be363d4de9be39857893d4134f6215",
+      "css": "picture",
+      "code": 59395,
+      "src": "elusive"
+    },
+    {
+      "uid": "19c50c52858a81de58f9db488aba77bc",
+      "css": "mic",
+      "code": 61744,
+      "src": "fontawesome"
+    }
+  ]
+}

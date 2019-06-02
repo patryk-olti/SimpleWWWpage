@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html lang = "pl">
+<head>
+	
+	<meta charset = "utf-8" />
+	<title>Akwizycja sygnałów audio.</title>
+	<meta name = "description" content = "Strona poswiecona sprawozdaniom z kursu Multimedia" />
+	<meta http-equiv = "X-UA-Compatible" content "IE-edge , chrome = 1" />
+	
+	<link rel = "stylesheet" href = "style.css" type = "text/css" />
+	
+	<script type = "text/javascript" src = "timer.js" > </script>
+	<script type = "text/javascript" src = "calendary.js" > </script>
+	
+</head>
+<body onload ="timer(), date()" >
+
+	<div class = "container" >
+		<div class = "top-bar" >
+			<div id = "logo" >
+				<div id = "left" > Patryk Oltuch </div>
+				<div id = "zegar" > timer() </div>
+				<div style = "clear:both" > </div>
+			</div>
+		</div>
+		
+		<div id = "nav1" >
+			<div id = "nav" >
+				<a href = "index.html" > <div class = "option" >Strona Główna</div> </a>
+				<a href = "sprawozdanie1.html" > <div class = "option" >Sprawozdania</div></a>
+				<a href = "dopobrania.html" > <div class = "option" >Do Pobrania</div></a>
+				<a href = "oautorze.html" ><div class = "option" >Autor</div></a>
+				<div style = "clear:both" > </div>
+			</div>
+		</div>
+	
+		<div id = "content"> 
+			<div id = "book">
+			
+			</br>
+			<center>	<span style="font-size:40px">Akwizycja sygnałów audio.</span>	</center>
+			</br></br>
+			
+			<span style="font-size:30px">1.	Wstęp teoretyczny.</span></br></br>
+			Cyfryzacja wszelkich sygnałów jest szalenie istotna, ponieważ pozwala nam na edycję takich sygnałów. Na takie potrzeby powstały przetworniki A/C i C/A, które zamieniają poprzez szereg procedur sygnały analogowe na cyfrowe, oraz odwrotnie. Zajmijmy się dokładniej zagadnieniem zmiany sygnału z analogowego na cyfrowy. Zmiana ta, a bardziej szereg procedur, jest wykonywany przez przetwornik A/C. Przetwornik taki otrzymuje na wejściu sygnał analogowy w postaci pewnego napięcia a na wyjściu oddaje w nasze ręce sygnał cyfrowy w postaci zer i jedynek. Proces ten składa się z trzech podstawowych procedur. Próbkowania, kwantyzacji, oraz kodowania. Każda z tych procedur jest szalenie istotna na drodze konwersji naszego sygnału na sygnał dyskretny. Nie może być sytuacji, abyśmy pominęli przynajmniej jeden z tych etapów.
+			</br></br>			
+			róbkowanie polega na pobieraniu wartości chwilowych sygnału w określonych momentach czasu. Momenty te są określone i stałe w całym okresie próbkowania. Są to wartości, które sami wybieramy, aby otrzymać sygnał dyskretny. Nie należy także przesadzać z zbyt małym odstępem czasu między kolejnymi próbkami, ponieważ nie będziemy w stanie efektywnie wykorzystać tak ogromnej ilości próbek. W chwili gdy mamy już próbki naniesione na wykres naszego sygnału a odstępy między kolejnymi próbkami są takie same, przechodzimi do procesu kwantyzacji. Z racji, iż działamy z przetwornikiem A/C, wyjściowy nasz sygnał będzie zero jedynkowy. Aby go uzyskać, potrzebujemy na tym etapie informację o rozdzielczości naszego przetwornika. Ilość bitów będzie informowała nas o ilości możliwych wartości jakie może przyjąć sygnał. Im większa rozdzielczość, tym sygnał będzie bardziej dokładny. Na tym samym etapie występuje skalowanie, czyli każdej próbce, w zależności do tego czy wartość mniejsza, czy wyższa od próbki jest bliższa jej wartości jest do niej skalowana. Na ostatnim etapie przetwarzania naszego sygnału, musimy zakodować nasze wyniki. Wyniki otrzymane na drodze kwantowania są wartościami decymalnymi, my zaś potrzebujemy postaci binarnej. Tak też zamieniane są wartości jako zbiór zer i jedynek. Należy już tylko usystematyzować nasze otrzymane wartości jako zbiór zer i jedynek, jedna za drugą wartością i tym samym wyznaczyć wzloty, czyli jedynki, oraz stany zero.
+			</br></br>
+			W ten oto sposób, sygnał z postaci napięcia uzyskanego po kablu naszego np. mikrofonu, trafia do komputera jako sygnał dyskretny, możliwy do dalszej obróbki w różnych programach do obróbki audio.
+			
+			</br></br></br>
+			<span style="font-size:30px">2.	Analiza nagranego audio w różnych parametrach. </span></br></br>
+			Ćwiczenie od strony realizacji na zajęciach wyglądało następująco. Należało nagrać własny plik audio, z rozszerzeniem .wav ponieważ jest to rozszerzenie bezstratne. Jest to bardzo istotne przy analizie plików audio, ponieważ parametry zostają takie jakie były w chwili nagrania. Zapis absolutnie nie wpływa na parametry rozdzielczości, rozmiaru pliku, czy częstotliwości a w efekcie wyglądu widm.
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/tab1.png"> </img>	</center>
+			</br>
+			<center><span style="font-size:24px">	Ścieżki audio.	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/mowa_22k_16bit.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	mowa_22k_16bit	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/mowa_44k_24bit.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	mowa_44k_24bit	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/mowa_48k_32bit.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	mowa_48k_32bit	</span></center>
+			</br>
+			Analiza ścieżek audio w tej postaci jest wysoce niepoprawna. Każde audio różni się chociażby sposobek mowy osoby nagrywającej, oraz tempa. Widzimy tak naprawdę 3 różne ścieżki, które różnią się długością, spowodowane jest to różną częstotliwością w chwili nagrania. Oczywiście nadal są to różne ścieżki, ale już w analizie widma, czy autokorelacji danych sygnałów, mamy możliwość pewnej analizy. Czynnik ludzki jest tu bardzo ważny, ponieważ wszelkie błędy i nieścisłości należy pojmować też przez pryzmat osoby nagrywającej.
+			
+			</br></br></br>
+			<center><span style="font-size:24px">	Widmo sygnału audio.	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/mowa_22k_16bit_widmo.png"	width=750px> </img>	</center>  <center><span style="font-size:12px">	mowa_22k_16bit_widmo	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/mowa_44k_24bit_widmo.png"	width=750px> </img>	</center>  <center><span style="font-size:12px">	mowa_44k_24bit_widmo	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/mowa_48k_32bit_widmo.png"	width=750px> </img>	</center>  <center><span style="font-size:12px">	mowa_48k_32bit_widmo	</span></center>
+			</br>
+			Widzimy iż widmo się różni, pierwsze od kolejnych dwóch. Tak jak wcześniej zostało już wyjaśnione. Analiza tych sygnałów pod względem wzmocnień, czy innych parametrów, które są w samej specyfice nagrania jest nie istotna. Można jedynie wyciągnąć błędne wnioski, ponieważ każde nagranie różni się nie tylko narratorem, tzn sposobem mówienia czy prędkością wypowiadanych głosek, mimo najszczerszych chęci narratora, ale także szumy, które w sali laboratoryjnej różnią się od tego jak wiele w danym momencie osób mówi, bądź nawet im dłużej zajęcia trwają (temperetura zwiększa się nieznacznie nawet, ale urządzenia już mocniej wentynują swoje komponenty). Widma różnią się, ponieważ została ukazana inna funkcja do analizy widma. W pierwszym przypadku jest to Bartlett okno, natomiast w dwóch następnych Gaussian (a=2.5). Dlaczego dwa następne są identyczne i nie została zmieniona funkcja na nową? Otóż chciałem tym samym ukazać wręcz zerowe zmiany w widmie mimo nowej próbki nagraniowej.
+			
+			</br></br></br>
+			<center><span style="font-size:24px">	Spektogram sygnału audio.	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/mowa_22k_16bit_spektogram.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	mowa_22k_16bit_spektogram	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/mowa_44k_24bit_spektogram.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	mowa_44k_24bit_spektogram	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/mowa_48k_32bit_spektogram.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	mowa_48k_32bit_spektogram	</span></center>
+			</br>
+			Można dostrzec że wraz ze zwiększeniem rozdzielczości bitowej, oraz częstotliwości nagrań audio w chwili nagrania, spektogram zaczyna być mniej wyraźny. 
+			
+			</br></br></br>
+			<center><span style="font-size:24px">	Kontrast	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/mowa_22k_16bit_kontrast.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	mowa_22k_16bit_kontrast	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/mowa_44k_24bit_kontrast.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	mowa_44k_24bit_kontrast	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/mowa_48k_32bit_kontrast.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	mowa_48k_32bit_kontrast	</span></center>
+			</br>
+			Kontrast jest parametrem, który jest atrakcyjny od strony analizy tego konkretnego sygnału. Widać iż każdy kolejny sygnał ma większą “głośność”, wynika to ze zwiększającej się częstotliwości  z każdym kolejnym sygnałem. 
+			
+			</br></br></br>
+			<span style="font-size:30px">3.	Analiza fragmentu muzyki uzyskanego na zajeciach. </span></br></br>
+			Na zajęciach został udostępniony plik audio, który mieścił w sobie muzykę. Plik został przekonwertowany na różne rozdzielczości, oraz częstotliwości, które informują nas o ilości próbek na sekundę.
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/tab2.png"> </img>	</center>
+			</br>
+			<center><span style="font-size:24px">	Ścieżki audio.	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/muz_22k_16bit.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	muz_22k_16bit	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/muz_44k_24bit.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	muz_44k_24bit	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/muz_48k_32bit.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	muz_48k_32bit	</span></center>
+			</br>
+			Ścieżki audio tego samego sygnału, który został zmieniony pod względem częstotliwości, oraz rozdzielczości bitowej różnią się znacznie. Zostały przeskalowane do 1min długości widzianej przez obserwatora, aby ukazać o ile zmienia się długość ścieżki, mimo iż rozmiar pliku jest taki sam. Można uznać, że ścieżki zostały ucięte i została połowa z całości porównując pierwszy z drugim. Otóż przy zmanie częstotliwości i rozdzielczości, mamy do czynienia nadal z tym samym plikiem, ponadto jest on tak samo długi. Otóż żaden dźwięk nie został ucięty, zostało audio tylko przyśpieszone co można przesłuchać w plikach dołączonych do sprawozdania w odpowiednim folderze. Tak więc w efekcie zmiany parametrów omawianych już wyżej, uzyskaliśmy pliki przyśpieszone z dźwiękiem wyższym od oryginalnego.
+			
+			</br></br></br>
+			<center><span style="font-size:24px">	Widmo sygnału audio.	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/muz_22k_16bit_widmo.png"	width=750px> </img>	</center>  <center><span style="font-size:12px">	muz_22k_16bit_widmo	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/muz_44k_24bit_widmo.png"	width=750px> </img>	</center>  <center><span style="font-size:12px">	muz_44k_24bit_widmo	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/muz_48k_32bit_widmo.png"	width=750px> </img>	</center>  <center><span style="font-size:12px">	muz_48k_32bit_widmo	</span></center>
+			</br>
+			Widma uzyskane z każdego pliku audio są identyczne. Pliki źródłowe są przeskalowane do identycznych rozmiarów, także można otworzyć plik i strzałką w bok otworzyć kolejne widmo. Jedyna różnica, która jest w widmach to maksymalna i minimalna częstotliwość. Jak można dostrzec największa wartość jest zawsze w punkcie (wartości) częstotliwości pliku. Wszystkie widma uzyskane tą samą funkcją, ponieważ już istniał sens analizy tak otrzymanych interpretacji sygnałów.
+			
+			</br></br></br>
+			<center><span style="font-size:24px">	Spektogram sygnałów.	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/muz_22k_16bit_spektogram.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	muz_22k_16bit_spektogram	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/muz_44k_24bit_spektogram.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	muz_44k_24bit_spektogram	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/muz_48k_32bit_spektogram.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	muz_48k_32bit_spektogram	</span></center>
+			</br>
+			Sygnał wraz ze wzrostem częstotliwości, na spektogramie zachowuje się w następujący spoós, jest bardziej owiany w kolory co może świadczyć o większym wysyceniu wyższych częstotliwości mowy w pliku muzycznym.
+			
+			</br></br></br>
+			<center><span style="font-size:24px">	Kontrast	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/muz_22k_16bit_kontrast.png"	width=750px> </img>	</center>  <center><span style="font-size:12px">	muz_22k_16bit_kontrast	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/muz_44k_24bit_kontrast.png"	width=750px> </img>	</center>  <center><span style="font-size:12px">	muz_44k_24bit_kontrast	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/muz_48k_32bit_kontrast.png"	width=750px> </img>	</center>  <center><span style="font-size:12px">	muz_48k_32bit_kontrast	</span></center>
+			</br>
+			Parametr “głośność” nie został zmieniony, mimo zmiany parametrów. Jest stały, zastanawiające jest więc czemu w przypadku pliku nagraniowego mieliśmy do czynienia ze zmianą głośności.
+			
+			</br></br></br>
+			<span style="font-size:30px">4.	Modyfikacja pliku muzycznego audio. </span></br></br>
+			Plik muzyczny: muz_22k_16bit
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/tab3.png"> </img>	</center>
+			</br>
+			<center><span style="font-size:24px">	Ścieżki audio.	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/muz_22k_16bit_spektogram.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	muz_22k_16bit_spektogram	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/muz_22k_16bit_spektogram_poglos.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	muz_22k_16bit_spektogram_poglos	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/muz_22k_16bit_spektogram_wahwah.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	muz_22k_16bit_spektogram_wahwah		</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie2/jpg/muz_22k_16bit_spektogram_zmientempo.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	muz_22k_16bit_spektogram_zmientempo		</span></center>
+			</br>
+			W przypadku zmiany tempa, czy poglośnienia, nic ciekawego na spektogramie się nie działo. W efekcie wahwah znajduje się ciekawy obraz, a bardziej w spektogramie owego efektu. Widać skoki, prawdopodobnie skoki te ukazują jak z słuchawki na słuchawki zostanie przeniesiony dźwięk, ponieważ efekt ten polega na tym, że słyszymy przez chwilę na lewej słuchwce, a po chwili słyszymy już na prawej. Nie dzieje się to skokowo, bardziej spokojnie z delikatnym, lecz wyraźnym przejściem.
+			</br></br>
+			
+			<span style="font-size:30px">	5. Wnioski </span></br></br>
+			Wszelka obróbka plików audio, została przeprowadzona za pomocą programu audacity. Program genialnie radzi sobie z generowaniem graficznej interpretacji sygnałów audio, oraz posiada szereg efektów, którymi możemy poprawić nasze audio. Wszelkie wnioski zostały przedstawione bezpośrednio pod grafikami dołączonymi do sprawozdania.
+			</br></br>
+			
+			
+			</div>
+			<div id = "menu" > 
+				<a href = "sprawozdanie1.html" > <div class = "option2" >Sprawozdanie nr. 1</div> </a>
+				<a href = "sprawozdanie2.html" > <div class = "option2" >Sprawozdanie nr. 2</div>	</a>
+				<a href = "sprawozdanie3.html" > <div class = "option2" >Sprawozdanie nr. 3</div>	</a>
+				<a href = "sprawozdanie4.html" > <div class = "option2" >Sprawozdanie nr. 4</div> </a>
+				<a href = "sprawozdanie5.html" > <div class = "option2" >Sprawozdanie nr. 5</div> </a>
+				
+				<div id = "data" > date() </div>
+			</div>
+			<div style = "clear:both" ></div>
+		</div>
+		<div id = "footer" >Wszelkie prawa zastrzeżone. &copy Strona stworzona na potrzeby kursu Multimedia na rok 2017/18.</div>
+	</div>
+
+</body>
+</html>

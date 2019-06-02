@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html lang = "pl">
+<head>
+	
+	<meta charset = "utf-8" />
+	<title>Kompresja obrazów nieruchomych.</title>
+	<meta name = "description" content = "Strona poswiecona sprawozdaniom z kursu Multimedia" />
+	<meta http-equiv = "X-UA-Compatible" content "IE-edge , chrome = 1" />
+	
+	<link rel = "stylesheet" href = "style.css" type = "text/css" />
+	
+	<script type = "text/javascript" src = "timer.js" > </script>
+	<script type = "text/javascript" src = "calendary.js" > </script>
+	
+</head>
+<body onload ="timer(), date()" >
+
+	<div class = "container" >
+		<div class = "top-bar" >
+			<div id = "logo" >
+				<div id = "left" > Patryk Oltuch </div>
+				<div id = "zegar" > timer() </div>
+				<div style = "clear:both" > </div>
+			</div>
+		</div>
+		
+		<div id = "nav1" >
+			<div id = "nav" >
+				<a href = "index.html" > <div class = "option" >Strona Główna</div> </a>
+				<a href = "sprawozdanie1.html" > <div class = "option" >Sprawozdania</div></a>
+				<a href = "dopobrania.html" > <div class = "option" >Do Pobrania</div></a>
+				<a href = "oautorze.html" ><div class = "option" >Autor</div></a>
+				<div style = "clear:both" > </div>
+			</div>
+		</div>
+	
+		<div id = "content"> 
+			<div id = "book">
+			
+			</br>
+			<center>	<span style="font-size:40px">Kompresja obrazów nieruchomych.</span>	</center>
+			</br></br>
+			
+			<span style="font-size:30px">1.	Wstęp teoretyczny.</span></br></br>
+			Obrazy nieruchome zazwyczaj nazywane obrazami, bądź grafikami charakteryzują się parametrami takimi jak: rozdzielczość, waga czy efekty którymi są urozmaicone nasze grafiki. Jak w przypadku innych sygnałów, obrazy charakteryzują się zależnością im plik mniej waży, tym mniejsza jest jego jakość. Dlatego tak ważne jest dobieranie parametrów naszego obrazu, bądź rozszerzeń, które to za nas zrobią, aby w sposób optymalny korzystać z obrazów.
+			</br></br>
+			Na laboratoriach otrzymaliśmy (drogą kompresji, dodania efektów, zmian rozszerzeń) ponad 120 obrazów. Aby w sposób inżynierski ocenić jakości tych obrazów, warto zastanowić się nad klasyfikacją, ponieważ nie wszędzie właśnie ta jakość będzie parametrem jaki mierzymi. W zależności od tego jakie pliki będą w podfolderach, będziemy wybierać parametry nas interesujące. Tym samym powstało 12 folderów z tą samą grafiką, natomiast innymi parametrami. Wnioski będziemy więc wyciągać w promieniu naszego folderu, ponieważ ocena grafiki o zmienionej głębi bitowej do pliku o innej rozdzielczości zwyczajnie nic nam nie da. 
+			</br></br>
+			
+			<span style="font-size:30px">2.	Analiza obrazów na podstawie rozszerzeń plików.</span></br></br>
+			<center> <img src = "sprawozdanie5/jpg/tab1.png"> </img>	</center>	<center><span style="font-size:14px">	Analiza folderu: rozszerzenia		</span></center>
+			</br></br>
+			Jak widać kompresja obrazów jest szalenie istotna i zwraca się uwagę aby ta waga była dostatecznie mała w celu przesyłania obrazów dalej, bądź dodania ich na social media. Jedyna różnica we wszystkich obrazach jest dostrzegalna w rozszerzeniu .gif. W tym rozszerzeniu na środku kwiata widać zdecydowanie pogorszenie się jakości co jest negatywne w odczuciach. Co ciekawe format .pdf mimo że nie jest formatem graficznym, przyjął się w mojej ocenie bardzo dobrze i ciężko mu ujmować w myśl innych obrazów od strony jakościowej. Oczywiście problem wynikać będzie z umieszczeniem takiego pliku np na stronie internetowej, natomiast w samej ocenie jakości wypada bardzo dobrze.
+			</br></br>
+			<center> <img src = "sprawozdanie5/rozszerzenia/bmp_bez_alfa.bmp" width=950px> </img>	</center>	<center><span style="font-size:12px">	bmp_z_alfa		</span></center>	</br></br>
+			<center> <img src = "sprawozdanie5/rozszerzenia/png_bezprzeplotu.png" width=950px> </img>	</center>	<center><span style="font-size:12px">	png_bezprzeplotu		</span></center>	</br></br>
+			
+			<span style="font-size:30px">3.	Analiza obrazów ze zmianą głębi bitowej.</span></br></br>
+			<center> <img src = "sprawozdanie5/jpg/tab2.png"> </img>	</center>	<center><span style="font-size:14px">	Analiza folderu: glebia_bitowa		</span></center>
+			</br></br>
+			Głębia bitowa to inaczej błębia koloru i odpowiada ona za ilość kolorów przypadająca na piksel. Jeżeli głębia jest rzędu 8bitów, to piksel może otrzymać 1 z 255 kolorów. Oczywiście wzór jest dwa nad n. Dostrzegamy także jak ogromny wpływ głębia bitowa ma na wagę naszego pliku. Zdecydowanie pierwsze trzy obrazy się różnią od siebie, następne na oko całkowitego laika jest jakość taka sama mimo zwiększającej się wagi do czterokrotności tego co moglibyśmy mieć jako tą samą jakość. Wniosek więc sam się nasywa, iż optymalną głębią bitową jest wartość 8 bitów.
+			</br></br>
+			<center> <img src = "sprawozdanie5/glebia_bitowa/bmp_glebiabitowa_2bit.bmp" width=950px> </img>	</center>	<center><span style="font-size:12px">	bmp_glebiabitowa_2bit		</span></center>	</br></br>
+			<center> <img src = "sprawozdanie5/glebia_bitowa/bmp_glebiabitowa_4bit.bmp" width=950px> </img>	</center>	<center><span style="font-size:12px">	bmp_glebiabitowa_4bit		</span></center>	</br></br>
+			<center> <img src = "sprawozdanie5/glebia_bitowa/bmp_glebiabitowa_8bit.bmp" width=950px> </img>	</center>	<center><span style="font-size:12px">	bmp_glebiabitowa_8bit		</span></center>	</br></br>
+			
+			<span style="font-size:30px">4.	Analiza obrazów ze zmianą rozdzielczości.</span></br></br>
+			<center> <img src = "sprawozdanie5/jpg/tab3.png"> </img>	</center>	<center><span style="font-size:14px">	Analiza folderu: rozdzielczosc		</span></center>
+			</br></br>
+			Rozdzielczość jest to rozmiar naszego pliku. Odznacza się ona dwiema zmiennymi: szerokość i wysokość i w takiej kolejności podaje się rozdzielczość. Widzimy ogromną zmianę wagi pliku wraz ze zwiększaniem się rozdzielczości. W momencie otwarcia takiego pliku dostrzegamy że różnią się właśnie rozmiarem, natomiast jakość jest porównywalna. Różnice wynikają w chwili rozciągnięcia pliku do tych samych rozmiarów. Widać że w plikach z mniejszą rozdzielczością możemy dostrzec piksele, rozmycia i inne niedociągłości. Wynika to z charakterystyki grafiki bitmapowej czy inaczej nazwanej grafiką rastrową. Grafika ta odznacza się stałą ilością pikseli w rozdzielczości i skalują się one wraz ze skalowaniem się samego obrazu jako całości.
+			</br></br>
+			Dobór rozdzielczości powinien być przemyślany, ponieważ nie zawsze potrzebujemy grafikę najwyższej rozdzielczości. W chwili gdy projektujemy plakat, który w rezultacie powinien mieścić się na papierze o rozmarach A2, powinniśmy wziąć pliki o większej rozdzielczości, ponieważ ta dokładność będzie widoczna, małe zaś grafiki zastosowane na takim plakacie będą zupełnie odznaczające się niską jakością. Jeżeli zależy nam właśnie na obrazie ostrym i wyraźnym z wieloma drobnymi smaczkami, powinniśmy zastosować większą rozdzielczość, aby efekt był zadowalający. 
+			</br></br>
+			<center> <img src = "sprawozdanie5/rozdzielczosc/bmp_rozdzielczosc_450_337.bmp" width=950px> </img>	</center>	<center><span style="font-size:12px">	bmp_rozdzielczosc_450_337		</span></center>	</br></br>
+			<center> <img src = "sprawozdanie5/rozdzielczosc/bmp_rozdzielczosc_1800_1350.bmp" width=950px> </img>	</center>	<center><span style="font-size:12px">	bmp_rozdzielczosc_1800_1350		</span></center>	</br></br>
+			
+			<span style="font-size:30px">5.	Analiza obrazów ze zmianą innych parametrów.</span></br></br>
+			</br></br>
+			Siła Koloru - Wartość parametru określającego każdy podstawowy kolor została dobrana na zajęciach od -255 do +255. 
+			</br>
+			Temperatura – wartość została dobrana na zajęciach w wartościach: -50, -25, +25, +50.
+			</br>
+			Gamma – zakres zmian obejmuje zbiór <0; 5>, ze skokiem co 0.5 jednostki.
+			</br>
+			Jasność – zakres zmian od -255 do +255.
+			</br></br>
+			Wartości te prawdopodobnie zostały błędnie dobrane, bądź błędnie wyrenderowane zostały pliki. Wartości parametrów podstawowych są stałe i nie oczekujemy znacznej zmiany, natomiast zmian wizualnych różwnież nie doświadczymy, mimo iż są wskazane dla zmiany każdego tego elementu w jakieś postaci. Interesującym jest, iż inne pliki zostały utworzone poprawnie co widać w sprawozdaniu, mimo iż procedura postępowania renderowania plików tych wyżej wymienionych ze zmianą gammy itd. była taka sama jak procedura renderowania plików o zmiennej rozdzielczości czy głębi bitowej.
+			</br></br>
+
+			<span style="font-size:30px">6.	Analiza obrazów o zmianie efektów.</span></br></br>
+			<center> <img src = "sprawozdanie5/jpg/tab4.png"> </img>	</center>	<center><span style="font-size:14px">	Analiza folderu: efekty		</span></center>
+			</br></br>
+			Wyniki ukazują że zmiana efektu niema wpływu na wagę naszego pliku. Oczywiście dostrzegamy jedną zmianę wagi pliku, ale to wynika ze zmiany głębi bitowej. 
+			</br></br>
+			<center> <img src = "sprawozdanie5/efekty/bmp_erozja.bmp" width=950px> </img>	</center>	<center><span style="font-size:12px">	bmp_erozja		</span></center>	</br></br>
+			<center> <img src = "sprawozdanie5/efekty/bmp_negatyw.bmp" width=950px> </img>	</center>	<center><span style="font-size:12px">	bmp_negatyw		</span></center>	</br></br>
+			<center> <img src = "sprawozdanie5/efekty/bmp_skala_szarosci.bmp" width=950px> </img>	</center>	<center><span style="font-size:12px">	bmp_skala_szarosci		</span></center>	</br></br>
+			
+			
+			</div>
+			
+			<div id = "menu" > 
+				<a href = "sprawozdanie1.html" > <div class = "option2" >Sprawozdanie nr. 1</div> </a>
+				<a href = "sprawozdanie2.html" > <div class = "option2" >Sprawozdanie nr. 2</div>	</a>
+				<a href = "sprawozdanie3.html" > <div class = "option2" >Sprawozdanie nr. 3</div>	</a>
+				<a href = "sprawozdanie4.html" > <div class = "option2" >Sprawozdanie nr. 4</div> </a>
+				<a href = "sprawozdanie5.html" > <div class = "option2" >Sprawozdanie nr. 5</div> </a>
+				
+				<div id = "data" > date() </div>
+			</div>
+			<div style = "clear:both" ></div>
+		</div>
+		<div id = "footer" >Wszelkie prawa zastrzeżone. &copy Strona stworzona na potrzeby kursu Multimedia na rok 2017/18.</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang = "pl">
+<head>
+	
+	<meta charset = "utf-8" />
+	<title>Kompresja sygnałów video.</title>
+	<meta name = "description" content = "Strona poswiecona sprawozdaniom z kursu Multimedia" />
+	<meta http-equiv = "X-UA-Compatible" content "IE-edge , chrome = 1" />
+	
+	<link rel = "stylesheet" href = "style.css" type = "text/css" />
+	
+	<script type = "text/javascript" src = "timer.js" > </script>
+	<script type = "text/javascript" src = "calendary.js" > </script>
+	
+</head>
+<body onload ="timer(), date()" >
+
+	<div class = "container" >
+		<div class = "top-bar" >
+			<div id = "logo" >
+				<div id = "left" > Patryk Oltuch </div>
+				<div id = "zegar" > timer() </div>
+				<div style = "clear:both" > </div>
+			</div>
+		</div>
+		
+		<div id = "nav1" >
+			<div id = "nav" >
+				<a href = "index.html" > <div class = "option" >Strona Główna</div> </a>
+				<a href = "sprawozdanie1.html" > <div class = "option" >Sprawozdania</div></a>
+				<a href = "dopobrania.html" > <div class = "option" >Do Pobrania</div></a>
+				<a href = "oautorze.html" ><div class = "option" >Autor</div></a>
+				<div style = "clear:both" > </div>
+			</div>
+		</div>
+	
+		<div id = "content"> 
+			<div id = "book">
+			
+			</br>
+			<center>	<span style="font-size:40px">Kompresja sygnałów wideo.</span>	</center>
+			</br></br>
+			
+			<span style="font-size:30px">1.	Wstęp teoretyczny.</span></br></br>
+			
+			Sygnały wideo są jednymi z najbardziej skomplikowanych sygnałów jakie istnieją w świecie multimedii. Łączy ze sobą sygnał audio i sygnał obrazów ruchowych, gdzie najważniejsza w połączeniu jest wzajemna odpowiedź jednego względem drugiego tzn. Aby audio zgrywało się z dźwiękiem, abyśmy czuli interakcję z filmem. Do powszechnych formatów wideo należą: .avi, .mp4, .amv, .gif. Należy także wspomnieć że najważniejszym, a przynajmniej tak się utarło wśród amatorów, parametrem wideo jest jego rozdzielczość, czyli ilość pikseli przypadającą na daną jednostkę powierzchni. Nikogo dziś nie dziwi jakość 4k, która staje się standardem, która musi obsługiwać 42 – 50 calowe telewizory w naszych domach. Aspekt audio prawie zawsze jest pomijany w rozmowie na temat wideo, ponieważ to właśnie co widzimy jest dla nas sygnałem wideo, co jak już ustaliliśmy jest błędem, ponieważ jest to połączenie obu sygnałów (audio, obrazów ruchowych). 
+			</br></br>
+			
+			<span style="font-size:30px">2.	Analiza sygnałów wideo uzyskanych drogą kompresji.</span></br></br>
+			
+			<center> <img src = "sprawozdanie4/jpg/tab1.png"> </img>	</center>
+			
+			</br></br>
+			Wideo oryginalne utworzone za pośrednictwem sekwencji filmów użytych na laboratoriach ma wiele do życzenia samo w sobie. Nierównomierna jakość całości wideo sprawia, iż odczucia oglądającego są zmieszane. Ponadto warto uzmysłowić sobie dlaczego zmieniamy rozszerzenia plików. Dlaczego właściwie zmieniamy kompresję. Otóż wszystko rozchodzi się o wagę naszego pliku. W chwili gdy mamy plik oryginalny i otrzymamy drogą kompresji nowy plik wideo o mniejszej wadze natomiast przybliżonej jakości możemy mówić o sukcesie. Nigdy drogą kompresji czy zmiany rozszerzenia pliku oryginalnego nie otrzymamy pliku o lepszej jakości. Ta maksymalnie dobra jakość właśnie jest ukryta w pliku oryginalnym. Warto spojrzeć na tabelę i dostrzec wagę pliku prawie 2 razy większą o rozdzielczości rzędu większej. Oryginalny plik wyrenderowany został w rozdzielczości 720p, natomiast plik otrzymany zapisaniem go w innym rozszerzeniu ma rozdzielczość 1080p. Niczym te filmy się nie różnią poza faktem wagi. Jakość pozostaje taka sama  w obu przypadkach. 
+			</br></br>
+			Dalsza analiza na podstawie subiektywnej oceny bez próby osób odpowiadającej na pytanie jak bardzo podoba ci się wideo jest zupełnie nieistotna. Generalne wnioski zostały wyciągnięte i odważyłbym się na stwierdzenie aby zapisywać zawsze pliki w rozszerzeniu .avi. Jest to rozszerzenie bezstratne i otrzymujemy jakość poziomu pliku oryginalnego. Warto też wspomnieć że wiele filmów wydawanych na nośniki bezprzewodowe czy możliwe do kupna w sklepach internetowych są rozszerzenia .avi. 
+			</br></br>
+			
+			
+			
+			
+			</div>
+			
+			<div id = "menu" > 
+				<a href = "sprawozdanie1.html" > <div class = "option2" >Sprawozdanie nr. 1</div> </a>
+				<a href = "sprawozdanie2.html" > <div class = "option2" >Sprawozdanie nr. 2</div>	</a>
+				<a href = "sprawozdanie3.html" > <div class = "option2" >Sprawozdanie nr. 3</div>	</a>
+				<a href = "sprawozdanie4.html" > <div class = "option2" >Sprawozdanie nr. 4</div> </a>
+				<a href = "sprawozdanie5.html" > <div class = "option2" >Sprawozdanie nr. 5</div> </a>
+				
+				<div id = "data" > date() </div>
+			</div>
+			<div style = "clear:both" ></div>
+		</div>
+		<div id = "footer" >Wszelkie prawa zastrzeżone. &copy Strona stworzona na potrzeby kursu Multimedia na rok 2017/18.</div>
+	</div>
+
+</body>
+</html>

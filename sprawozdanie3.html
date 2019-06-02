@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html lang = "pl">
+<head>
+	
+	<meta charset = "utf-8" />
+	<title>Kompresja sygnałów audio.</title>
+	<meta name = "description" content = "Strona poswiecona sprawozdaniom z kursu Multimedia" />
+	<meta http-equiv = "X-UA-Compatible" content "IE-edge , chrome = 1" />
+	
+	<link rel = "stylesheet" href = "style.css" type = "text/css" />
+	
+	<script type = "text/javascript" src = "timer.js" > </script>
+	<script type = "text/javascript" src = "calendary.js" > </script>
+	
+</head>
+<body onload ="timer(), date()" >
+
+	<div class = "container" >
+		<div class = "top-bar" >
+			<div id = "logo" >
+				<div id = "left" > Patryk Oltuch </div>
+				<div id = "zegar" > timer() </div>
+				<div style = "clear:both" > </div>
+			</div>
+		</div>
+		
+		<div id = "nav1" >
+			<div id = "nav" >
+				<a href = "index.html" > <div class = "option" >Strona Główna</div> </a>
+				<a href = "sprawozdanie1.html" > <div class = "option" >Sprawozdania</div></a>
+				<a href = "dopobrania.html" > <div class = "option" >Do Pobrania</div></a>
+				<a href = "oautorze.html" ><div class = "option" >Autor</div></a>
+				<div style = "clear:both" > </div>
+			</div>
+		</div>
+	
+		<div id = "content"> 
+			<div id = "book">
+			
+			</br>
+			<center>	<span style="font-size:40px">Kompresja sygnałów audio.</span>	</center>
+			</br></br>
+			
+			<span style="font-size:30px">1.	Wstęp teoretyczny.</span></br></br>
+			
+			Kompresja audio towarzyszy nam na każdym kroku naszego działania. Pliki otrzymane drogą nagraniową bardzo często są zbyt duże, wynika to z ilości informacji jakie są przechowywane przez plik. Po nagraniu pliku i zapisaniu go w formacje pliku roboczego dowolnego programu do obróbki audio, przekracza on wielokrotnie rozmiar do tego co my chcemy uzyskać w efekcie. Właśnie dlatego kompresujemy nasz plik do plików najczęściej stratnych, ponieważ nie chcemy obrabiać go w dalszym ciągu, lecz jedynie go odczytywać (dla nas będzie to odsłuchiwanie). Jeżeli jednak chcemy edytować plik z pomocą przychodzi nam rozszerzenie bez kompresji stratnej, natomiast należy liczyć się z faktem, że otrzymany tą drogą plik będzie warzył bardzo dużo i nie będzie praktyczny z punktu widzenia osoby, która chce go tylko odtworzyć i posłuchać. 
+			</br></br>	
+			Popularnymi formatami kompresji sygnałów audio są: mp3, Real Audio. Jednakże najpopularniejszym jest ten pierwszy i to z nim będziemy mierzyć się w dzisiejszych zajęciach, jak i w życiu codziennym. Wszystkie utwory muzyczne są rozpowszechniane właśnie z rozszerzeniem mp3, wynika to z niesamowitej użyteczności czyli wysokiej jakości do poziomu kompresji sygnału audio, które w efekcie daleko nie odbiega od pliku np. .wav, lecz warzy zdecydowanie mniej.
+			</br></br>	
+			Wyróżniamy główne dwie metody oceny audio: 
+			</br>
+			-Degradation Category Rating – Pięciostopniowa skala oceny, porównuje się próbkę oryginalną z badaną, skompresowaną w następującej kolejności: Wzorzec → Skompresowana. Ocenia się WZORZEC, następnie Skompresowaną. Oceną jest średnia arytmetyczna słuchaczy danego eksperymentu.
+			</br></br>	
+			-Absolute Category Rating – Pięciostopniowa skala oceny w której laborant ocenia próbkę tylko raz i na podstawie subiektywnej oceny otrzymuje wyniki oceny próbki.
+			</br></br>	
+			DCR jest lepszym sposobem oceny próbek, ponieważ w przypadku subiektywnej oceny, optymalnie jest wyciągnąć średnią arytmetyczną z oceny kilku słuchaczy niżeli jednego tylko. Rozbieżności w wynikach będą tym mniejsze, im większa będzie grupa słuchaczy. 
+			</br></br>
+			
+			<span style="font-size:30px">2.	Postępowanie utworzenia skompresowanego pliku.</span></br></br>
+			
+			Pliki użyte z ćwiczenia poprzedniego, zostały nagrane w danym formacie, tzn każdy plik zatytułowany “mowa_*.wav” został nagrany osobno pod konkretną częstotliwość i rozdzielczość. W tym ćwiczeniu należy zmienić kompresję, a bardziej konkretny parametr, czyli rozdzielczość, aby osiągnąć z pliku bazowego rozdzielczość rzędu 8bitów. W założeniu powinniśmy otrzymać “kanciasty” wykres sygnału, oraz zmniejszoną wagę pliku. 
+			
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/opis1.png"> </img>	</center>
+			<center><span style="font-size:12px">	Jakość -> Ustawienia	</span></center>
+			
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/opis2.png"> </img>	</center>
+			<center><span style="font-size:12px">	Eksportuj plik do rozszerzenia .wav	</span></center>
+			
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/opis3.png"> </img>	</center>
+			<center><span style="font-size:12px">	wybór rozdzielczość niestandardowej	</span></center>
+			
+			</br></br>
+			<span style="font-size:30px">3.	Analiza parametrów sygnałów uzyskanych drogą kompresji.</span></br></br>
+			</br>
+			<center> <img src = "sprawozdanie3/jpg/tab1.png"> </img>	</center>
+			
+			</br></br></br>
+			<center><span style="font-size:24px">	Ścieżki audio (mowa)	</span></center>
+			</br>
+			<center>	Ścieżki audio zostały zestawione jedna pod drugą, oryginał nad skompresowanym plikiem.	</center>
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/mowa_22k_16bit_8bit.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	mowa_22k_16bit_8bit	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/mowa_44k_24bit_8bit.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	mowa_44k_24bit_8bit	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/mowa_48k_32bit_8bit.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	mowa_48k_32bit_8bit	</span></center>
+			</br>
+			Jak widać ścieżki audio różnią się od oryginalnych. Wyjątkiem jest sygnał 16 bitowy, on od swojego następcy 8 bitowego nie różni się. Wydaje mi się że jest to związane z minimalną rozdzielczością plików, uzyskiwanych w programie AudaCity. Co ciekawe na zajęciach laboratoryjnych wszystkie pliki były zrealizowane zgodnie z instrukcją, a różnice wynikającego z kształtu ścieżek były widoczne. W domu zaś w trakcie przygotowywania sprawozdania okazało się, iż pliki po skonwertowaniu są zupełnie identyczne w porównaniu do plików oryginalnych. Nie mam pojęcia jakim sposobem to się wydarzyło, natomiast ćwiczenie zostało powtórzone w domowych warunkach i otrzymaliśmy tym samym takie a nie inne ścieżki. Warto zaznaczyć iż rozdzielczość to właśnie potęga przy 2 która określa ilość stanów naszej próbki, im mniejsza ona będzie tym ścieżka audio czyli grafina interpretacja naszego sygnału będzie bardziej kwadratowa. Tym samym największe różnice możemy dostrzec w ostatnim pliku graficznym, ponieważ on ukazuje różnicę 32 bitów i 8, bądź według mojej oceny 16 bitów. Zwłaszcza wartym uwagi są krańce ścieżki, ponieważ to one najlepiej oddają różnicę tych rozdzielczości.
+			
+			</br></br></br>
+			<center><span style="font-size:24px">	Widmo sygnału audio (mowa)	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/mowa_22k_16bit_8bit_widmo.png"	width=750px> </img>	</center>  <center><span style="font-size:12px">	mowa_22k_16bit_8bit_widmo	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/mowa_44k_24bit_8bit_widmo.png"	width=750px> </img>	</center>  <center><span style="font-size:12px">	mowa_44k_24bit_8bit_widmo	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/mowa_48k_32bit_8bit_widmo.png"	width=750px> </img>	</center>  <center><span style="font-size:12px">	mowa_48k_32bit_8bit_widmo	</span></center>
+			</br>
+			
+			</br></br></br>
+			<center><span style="font-size:24px">	Spektogram sygnału audio (mowa)	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/mowa_22k_16bit_8bit_spektogram.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	mowa_22k_16bit_8bit_spektogram	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/mowa_44k_24bit_8bit_spektogram.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	mowa_44k_24bit_8bit_spektogram	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/mowa_48k_32bit_8bit_spektogram.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	mowa_48k_32bit_8bit_spektogram	</span></center>
+			</br>
+			Spektogramy różnią się nieznacząco, z punktu widzenia inżynierskiego nie wnoszą nic w nasze wnioski, z racji iż są to różne sygnały, cieżko wyciągnąć wnioski z tak małych różnic.
+			</br>
+			
+			</br></br></br>
+			<center><span style="font-size:24px">	Ścieżki audio (muzyka)	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/muz_22k_16bit_8bit.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	muz_22k_16bit_8bit	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/muz_44k_24bit_8bit.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	muz_44k_24bit_8bit	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/muz_48k_32bit_8bit.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	muz_48k_32bit_8bit	</span></center>
+			</br>
+			Uzyskane ścieżki audio różnią się od siebie, nawet na poziomie rozdzielczości 16 bitów, widać ewidentne różnice w rozdzielczości bitowej każdej ze ścieżek, natomiast porównanie skompresowanych byłoby bardziej efektywne, ponieważ te ścieżki nie różnią się od siebie. Ten sam sygnał audio, który został skompresowany do każdej z częstotliwości i rozdzielczości jest ciekawy w opisie i analizie. Widać tym samym że z każdą zmianą rozdzielczości na wyższą, graficzna interpretacja jest bliższa spokojnym spadkom, wynikającym z większej rozdzielczości. Ciekawą kwestią też jest zmiana częstotliwości, ponieważ przez zmianę próbkowania uzyskaliśmy sygnały różnych długości, sygnał 22kHz jest dwa razy dłuższy od sygnału 44kHz. Wynika to z faktu iż mieliśmy jeden plik muzyczny, który o jednej długości i bazowej rozdzielczości konwertowaliśmy na wskazane parametry z laboratorium.
+			
+			</br></br></br>
+			<center><span style="font-size:24px">	Widmo sygnału audio (muzyka)	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/muz_22k_16bit_8bit_widmo.png"	width=750px> </img>	</center>  <center><span style="font-size:12px">	muz_22k_16bit_8bit_widmo	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/muz_44k_24bit_8bit_widmo.png"	width=750px> </img>	</center>  <center><span style="font-size:12px">	muz_44k_24bit_8bit_widmo	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/muz_48k_32bit_8bit_widmo.png"	width=750px> </img>	</center>  <center><span style="font-size:12px">	muz_48k_32bit_8bit_widmo	</span></center>
+			</br>
+			Widmo nie będzie różniło się, ponieważ wszystkie pliki są identyczne. Widać jedynie zmianę częstotliwości, która jest osią OX naszego wykresu. Widmo odpowiada między innymi za ukazanie sposobu mówienia i innych parametrów audiowizualnych. Jeżeli więc nagranie jest takie samo, a jedynie zmienia się częstotliwość, to wykres będzie odpowiednio dłuższy, bądź krótszy, natomiast niczym innym nie będzie się różnił od swych poprzedników.
+			</br>
+			
+			</br></br></br>
+			<center><span style="font-size:24px">	Spektogram sygnału audio (muzyka)	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/muz_22k_16bit_8bit_spektogram.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	muz_22k_16bit_8bit_spektogram	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/muz_44k_24bit_8bit_spektogram.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	muz_44k_24bit_8bit_spektogram	</span></center>
+			</br></br>
+			<center> <img src = "sprawozdanie3/jpg/muz_48k_32bit_8bit_spektogram.png"	width=950px> </img>	</center>  <center><span style="font-size:12px">	muz_48k_32bit_8bit_spektogram	</span></center>
+			</br>
+			Spektogram w zestawieniu kilku graficznych interpretacji  tego samego sygnału jest bardzo interesujący od strony analizy inżynierskiej. Widzimy że wraz ze wzrostem częstotliwośc od 22kHz do 48kHz, wartości czerwone na spektogramie unoszą się. Wskazuje to właśnie na zwiększanie się tej częstotliwości, ponieważ spektogram jest wykresem częstotliwości od czasu, tak i na osi OX mamy czas, a na osi OY częstotliwość. Są to częstotliwości mowy, czy innych dźwięków zarejestrowanych przez kompakt. Idąc tą logiką, powinniśmy produkować pliki audio właśnie z wysoką częstotliwością. Dzięki temu wartości mogą przybierać wartości z większej bazy częstotliwości. Dzięki temu otrzymujemy plik audio o zdecydowanie lepszej jakości, który w efekcie może stać się plikiem atrakcyjniejszym od strony audiowizualnej.
+			</br>
+			
+			</br></br>
+			<span style="font-size:30px">4.	Ocena subiektywna próbek audio.</span></br></br>
+			</br>
+			<center> <img src = "sprawozdanie3/jpg/tab2.png"> </img>	</center>
+			
+			mowa_22k_16bit – plik nagrany, w którym są dostrzegalne szumy, niesą to ogromne szumy i na jakiś czas nie są uporczywe, natomiast z dłuższym słuchaniem mogą okazać się sporym problemem dla słuchacza.
+			</br></br>	
+			mowa_22k_16bit_8bit – plik skompresowany w którym można usłyszeć szumy na wyższym poziomie, okazuje się że zmniejszego rozdzielczości, sprawia zwiększenie głośności szumów w pliku audio.
+			</br></br>	
+			mowa_44k_24bit – plik nagrany, według mnie najlepszy z nagranych plików, ponieważ szumy są bardzo niewielkie, na słuchawkach je słyszałem, natomiast przez głośnik w laptopie są one niezauważalne.
+			</br></br>	
+			mowa_44k_24bit_8bit – plik skompresowany tak jak plik wczęsniejszy skompresowany wyraźniejsze szumy, które psują totalnie wrażenia słuchowe.
+			</br></br>	
+			mowa_48k_32bit – plik nagrany, wiele stukania, wydaje mi się że częstotliwość była za wysoka, stąd wiadomo dlaczego nagrania audio są zazwyczaj w częstotliwości 44,1kHz. Plik zupełnie nie do odsłuchu.
+			</br></br>	
+			mowa_48k_32bit_8bit – Plik skompresowany, najgorszy możliwy plik z puli plików “mowa”, dużo stukań wynikających ze zbyt wysokiej częstotliwości, oraz bardzo głośne szumy.
+			</br></br>	
+			muz_22k_16bit – według mnie najlepszy plik, wynika to z faktu iż jest to plik naturalny, naturalna długość pliku sprawia iż prędkość z jaką plik jest odtwarzany jest optymalny, czyli z założeń producenta wymagany i odpowiedni.
+			</br></br>
+			muz_22k_16bit_8bit – plik z szumem sprawia że totalnie nie można jego słuchać.
+			</br></br>
+			muz_44k_24bit – plik ma zmienioną częstotliwość co sprawia iż plik odtwarza się nienaturalnie szybko, to właśnie sprawia iż jestem na nie, lecz niema szumów.
+			</br></br>
+			muz_44k_24bit_8bit – plik jak wyżej dużo szybszy i zdecydowanie słychać szumy które są okpnym utrapieniem dla słuchacza.
+			</br></br>
+			muz_48k_32bit – plik szybszy od 44kHz, nie występują żadne przykre niespodzianki, natomiast prędkość odtwarzanie jest zupełnie nienaturalna.
+			</br></br>
+			muz_48k_32bit_8bit – najgorszy plik z możliwych, plik który ma okropne szumy przez które nie słychać i tak nienaturalnej muzyki, która odtwarza się bardzo szybko.
+
+			</br></br>
+			<span style="font-size:30px">5. Wnioski.</span></br></br>
+			
+			Jak można dostrzec kompresja sygnałów audio wiąże się ze zmianami bardziej lub mniej porządanymi. W naszym przypadku ze zmianą rozdzielczości wiązałą się zmiana głośności szumów, które występują w każdym nagraniu audio. Im różnica rozdzielczości była większa od oryginalnej rozdzielczości bitowej, tym głośność była większa. Kolejnym bardzo ciekawym spostrzeżeniem może być zmiana częstotliwości próbkowania. W przypadku sygnałów do 44kHz, zmian nie dostrzegaliśmy, natomiast po przekroczeniu magicznej liczby 44 100 Hz, zaczęły występować nieporządane elementy w sygnale. Stukanie było w całej ciągłości sygnału przy zmianie częstotliwości na 48kHz.
+			</br></br>
+			Kompresja zawsze wiąże się z pogorszeniem sygnału audio za cenę wagi jaką przyjmuje plik, natomiast lepszym sposobem zmniejszenia wagi pliku jest zmiana rozszerzenia i użycie kompresji stratnej np. na plik .mp3, ponieważ w sposób optymalny zmniejszy nam wagę pliku, nie zmianiając drastycznie wrażeń audiowizualnych. 
+			</br></br>
+			
+			
+			
+			
+			</div>
+			
+			<div id = "menu" > 
+				<a href = "sprawozdanie1.html" > <div class = "option2" >Sprawozdanie nr. 1</div> </a>
+				<a href = "sprawozdanie2.html" > <div class = "option2" >Sprawozdanie nr. 2</div>	</a>
+				<a href = "sprawozdanie3.html" > <div class = "option2" >Sprawozdanie nr. 3</div>	</a>
+				<a href = "sprawozdanie4.html" > <div class = "option2" >Sprawozdanie nr. 4</div> </a>
+				<a href = "sprawozdanie5.html" > <div class = "option2" >Sprawozdanie nr. 5</div> </a>
+				
+				<div id = "data" > date() </div>
+			</div>
+			<div style = "clear:both" ></div>
+		</div>
+		<div id = "footer" >Wszelkie prawa zastrzeżone. &copy Strona stworzona na potrzeby kursu Multimedia na rok 2017/18.</div>
+	</div>
+
+</body>
+</html>
